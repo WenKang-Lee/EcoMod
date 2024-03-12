@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "EcoMod"
-version = "0.1.5"
+version = "0.1.6"
 description = "A simple species distribution modelling package. Functionality is currently limited to BIOCLIM."
 readme = "README.md"
 requires-python = ">=3.11"
