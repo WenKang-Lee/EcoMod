@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core>=3.9"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "EcoMod"
+version = "0.1.5"
+description = "A simple species distribution modelling package. Functionality is currently limited to BIOCLIM."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name="Wen Kang Lee", email="wynn.wk.lee@gmail.com" },
+]
+keywords = ['species distribution', 'ecological niche', 'habitat suitability']
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: GIS"
+]
+dependencies = [
+    "pygbif",
+    "numpy",
+    "matplotlib",
+    "scikit-learn"
+]
+
+[project.urls]
+Documentation = "https://flit.pypa.io"
+Source = "https://github.com/WenKang-Lee/EcoMod"
