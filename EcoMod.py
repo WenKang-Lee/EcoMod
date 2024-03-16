@@ -224,13 +224,16 @@ if __name__ == '__main__':
     final_future = normalise()
 
     # # map plotting
-    scatter_cmap = plt.get_cmap('cool')
+    scatter_cmap = plt.get_cmap('cool', 7)
     scatt_plot = plt.scatter(fut_long, fut_lat, c=dens_colour, cmap=scatter_cmap)
-    plt.legend(*scatt_plot.legend_elements(), title='Occurrences density')
+    legd_elements = scatt_plot.legend_elements()
+    handles = legd_elements[0][::2]
+    labels = [f"Up to {x}" for x in legd_elements[1][::2]]
+    plt.legend(handles, labels, title='Occurrences density')
     plt.imshow(final_future, cmap='viridis',
             extent=extent_84320700)
     plt.colorbar(label='Habitat Suitability Index')
     plt.xlabel('Longitude')
     plt.ylabel('Latitude')
-    plt.title('Bioclim Map')
+    plt.title('Rusty Patched Bumblebee BioClim')
     plt.show()
